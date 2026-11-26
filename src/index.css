@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* Tipografi */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+
+  /* Palet Warna */
+  --color-canvas: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f2f4f7;
+  --color-border-hairline: #e2e5e9;
+  --color-border-strong: #cbd2d9;
+  --color-ink-primary: #0b0d10;
+  --color-ink-secondary: #475467;
+  --color-ink-muted: #667085;
+  --color-signal: #0052ff;
+  --color-signal-hover: #003ecc;
+  --color-code-bg: #0d1117;
+  --color-code-border: #21262d;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-canvas);
+    color: var(--color-ink-primary);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-heading {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  code,
+  pre,
+  kbd,
+  .font-code {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Utilitas Swiss-Grid */
+.swiss-grid-bg {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(226, 229, 233, 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 229, 233, 0.55) 1px, transparent 1px);
+}
+
+.tabular-metric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scrollbar halus */
+.code-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.code-scroll::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.code-scroll::-webkit-scrollbar-thumb {
+  background: #30363d;
+}
+
+.code-scroll::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
